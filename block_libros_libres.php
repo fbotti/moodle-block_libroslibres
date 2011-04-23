@@ -21,7 +21,7 @@
  * @subpackage block
  * @copyright  2011 Federico J. Botti - Entornos Educativos
  * @author     2011 Federico J. Bott <federico@entornos.com.ar>
- * @version    1
+ * @version    1.0
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -57,7 +57,7 @@ class block_libros_libres extends block_base {
     </form>
 </div><br />
 ';
-        $this->content->footer = '<a hre="http://libroslibres.flacso.org.ar">http://libroslibres.flacso.org.ar</a>';
+        $this->content->footer = '<a href="http://libroslibres.flacso.org.ar">http://libroslibres.flacso.org.ar</a>';
         return $this->content;
     }
 }
