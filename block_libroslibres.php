@@ -1,4 +1,4 @@
-<?php //$Id: block_libros_libres.php,v 1 2011-04-23 22:00:00 fbotti Exp $
+<?php //$Id: block_libroslibres.php,v 1 2011-04-23 22:00:00 fbotti Exp $
 
 // This file is part of Moodle - http://moodle.org/
 //
@@ -25,10 +25,10 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_libros_libres extends block_base {
+class block_libroslibres extends block_base {
 
     function init() {
-        $this->title = get_string('pluginname','block_libros_libres');
+        $this->title = get_string('pluginname','block_libroslibres');
     }
 
     function get_content() {
@@ -43,13 +43,13 @@ class block_libros_libres extends block_base {
         $this->content->text = '';
         $this->content->text .= '
 <div class="libroslibres">
-    <img style="" src="'.$OUTPUT->pix_url('logo','block_libros_libres').'" />
+    <img style="" src="'.$OUTPUT->pix_url('logo','block_libroslibres').'" />
     <form id="search-block-form" method="post" target="_blank" accept-charset="UTF-8" action="'.$action.'">
         <div>
             <div class="container-inline">
                 <div style="display: inline;" id="edit-search-block-form-1-wrapper" class="form-item">
                     <input type="text" class="form-text" onfocus="if (this.value == \'Buscar en este sitio\') {this.value = \'\';} this.style.color = \'#000000\';" onblur="if (this.value == \'\') {this.value = \'Buscar en este sitio\';} this.style.color = \'#000000\';" value="Buscar en este sitio" size="15" id="edit-search-block-form-1" name="search_block_form" maxlength="128" style="color: rgb(0, 0, 0);">
-                    <input type="image" src="'.$OUTPUT->pix_url('search-button','block_libros_libres').'" class="form-submit" id="" name="">
+                    <input type="image" src="'.$OUTPUT->pix_url('search-button','block_libroslibres').'" class="form-submit" id="" name="">
                 </div>
                 <input id="edit-search-block-form" type="hidden" value="search_block_form" name="form_id">
             </div>
@@ -62,4 +62,3 @@ class block_libros_libres extends block_base {
     }
 }
 ?>
-
