@@ -1,4 +1,4 @@
-<?php //$Id: block_libroslibres.php,v 1 2011-04-23 22:00:00 fbotti Exp $
+<?php //$Id: block_libroslibres.php,v.1.0 2011-04-23 22:00:00 fbotti Exp $
 
 // This file is part of Moodle - http://moodle.org/
 //
@@ -28,7 +28,8 @@
 class block_libroslibres extends block_base {
 
     function init() {
-        $this->title = get_string('pluginname','block_libroslibres');
+        $this->title = get_string('libroslibres','block_libroslibres');
+        $this->version = 2011042500;
     }
 
     function get_content() {
@@ -37,19 +38,19 @@ class block_libroslibres extends block_base {
         if ($this->content !== NULL) {
             return $this->content;
         }
-        $action = "http://libroslibres.flacso.org.ar/search/";
+        $action = get_string('formaction','block_libroslibres');
         
         $this->content = new stdClass;
         $this->content->text = '';
-        $this->content->text .= '
+        $this->content->text .= '          
 <div class="libroslibres">
-    <img style="" src="'.$OUTPUT->pix_url('logo','block_libroslibres').'" />
+    <img style="" src="'.$CFG->wwwroot.'/blocks/libroslibres/pix/logo.png" />
     <form id="search-block-form" method="post" target="_blank" accept-charset="UTF-8" action="'.$action.'">
         <div>
             <div class="container-inline">
                 <div style="display: inline;" id="edit-search-block-form-1-wrapper" class="form-item">
                     <input type="text" class="form-text" onfocus="if (this.value == \'Buscar en este sitio\') {this.value = \'\';} this.style.color = \'#000000\';" onblur="if (this.value == \'\') {this.value = \'Buscar en este sitio\';} this.style.color = \'#000000\';" value="Buscar en este sitio" size="15" id="edit-search-block-form-1" name="search_block_form" maxlength="128" style="color: rgb(0, 0, 0);">
-                    <input type="image" src="'.$OUTPUT->pix_url('search-button','block_libroslibres').'" class="form-submit" id="" name="">
+                    <input type="image" src="'.$CFG->wwwroot.'/blocks/libroslibres/pix/search-button.png" class="form-submit" id="" name="">
                 </div>
                 <input id="edit-search-block-form" type="hidden" value="search_block_form" name="form_id">
             </div>
@@ -57,7 +58,7 @@ class block_libroslibres extends block_base {
     </form>
 </div><br />
 ';
-        $this->content->footer = '<a href="http://libroslibres.flacso.org.ar">http://libroslibres.flacso.org.ar</a>';
+        $this->content->footer = '<a href="'.get_string('footerurl','block_libroslibres').'">'.get_string('footerurl','block_libroslibres').'</a>';
         return $this->content;
     }
 }

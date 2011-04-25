@@ -1,16 +1,16 @@
-.block .content .libroslibres {
+.sideblock .content .libroslibres {
 	margin:auto;
    text-align: center;
    display: inline;
 }
-.block .content .libroslibres img{
+.sideblock .content .libroslibres img{
     height: 80px;
     width: 160px;
     padding: 4px;
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #CCCCCC;
 }
-.block .content .libroslibres #edit-search-block-form-1 {
+.sideblock .content .libroslibres #edit-search-block-form-1 {
     display: block;
     float: left;
     height: 15px;
@@ -18,6 +18,6 @@
     text-align: left;
     width: 140px;
 }
-.block .content .libroslibres .form-submit {
+.sideblock .content .libroslibres .form-submit {
     height: 20px;
 }
